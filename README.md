@@ -5,6 +5,16 @@
 The R Script includes code that will install the packages, but just in case, you may also want to have it installed beforehand.
 <br>
 R: gwasrapidd (https://github.com/ramiromagno/gwasrapidd), biomaRt, dplyr
+<br>
+To install it beforehand, run these lines of R code in your environment:
+<br>
+`install.packages("remotes")`
+<br>
+`remotes::install_github("ramiromagno/gwasrapidd")`
+<br>
+ `install.packages("BiocManager")`
+ <br>
+`BiocManager::install("biomaRt")`
 
 ### How to use (for test input)
 Once you have cloned the repository into your directory using this command,
