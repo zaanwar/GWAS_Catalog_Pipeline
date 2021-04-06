@@ -3,6 +3,7 @@
 
 ### Packages you may have to install prior to running
 The R Script includes code that will install the packages, but just in case, you may also want to have it installed beforehand.
+<br>
 R: gwasrapidd (https://github.com/ramiromagno/gwasrapidd), biomaRt, dplyr
 
 ### How to use (for test input)
