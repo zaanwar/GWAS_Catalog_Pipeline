@@ -10,3 +10,15 @@ To run the script, you will need to run the get_gwas_associations.R file,
 <br>
 `Rscript get_gwas_associations.R`
 <br>
+
+### Weekly Milestones
+| Week  | Geraldine | Zain | Jessie |
+| ------------- | ------------- |------------- | ------------- |
+| Mar 15 (Repo Check #1 Mar 18)  | Focus preparing Design Doc, Continue research on background info | Continue research on GWAS Catalog API  | Continue research on gwasrapidd and ensembl  |
+| Mar 22 (Initial Group Presentation Mar 23) | Add to presentation, updating documentation, work on parsing of full csv input file  | Add to presentation, look into word matching techniques (Hamming Distance)  | Add to presentation, work on test code of gwasrapidd with test input |
+| Mar 29 (Progress Presentations)| Begin testing code of Jessie & Zain, work on progress presentation updates  | Work on test code of word matching with test output from Jessie’s gwasrapidd code  | Work on iteration of test code (more than 1 gene/snp)  |
+| Apr 5 (Repo Check #2 Apr 8)| Work on wrapper to quickly implement Jessie & Zain’s codes together  | Implement code with other parts (Jessie’s gwasrapidd)  | Implement code with other parts (Zain’s word match)  |
+| Apr 12 (Progress Presentations)| Finish up code | Finish up code  | Finish up code  |
+| Apr 19 (Repo Check #3 Apr 22)| Implement code with others and troubleshoot  | Implement code with others and troubleshoot  | Implement code with others and troubleshoot  |
+| Apr 26 (Final Presentation)  | Work on final presentation  | Work on final presentation  | Work on final presentation  |
+| May 3 (Final Project Code)  | Final Presentations  | Final Presentations  | Final Presentations  |
