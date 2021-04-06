@@ -1,4 +1,5 @@
-# GWAS_Catalog_Pipeline
+# GWAS Catalog Pipeline
+## COMP383/483 Group 8 - Geraldine San Ramon, Zain Anwar, Jessie Chen 
 ### How to use (for test input)
 Once you have cloned the repository into your directory using this command,
 <br>
