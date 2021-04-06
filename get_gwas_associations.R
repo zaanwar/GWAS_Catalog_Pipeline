@@ -9,11 +9,13 @@ library(gwasrapidd)
 library(biomaRt)
 library(dplyr)
 
-#extracting the 
-#twas_genes <- read.csv('group8/ENSG-ID_phenotype.txt', sep = '\t' )
-#test_input <- twas_genes %>%
-#  distinct(Phenotype, .keep_all = TRUE)
-#write.table(test_input, "test_ENSG-ID_phenotype.txt", sep = "\t")
+#extracting the twas results with the gene names and the phenotypes
+#twas_genes <- read.csv('ENSG-ID_phenotype.txt', sep = '\t' )
+twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv')
+test_input <- twas_genes %>%
+  distinct(Phenotype, .keep_all = TRUE)
+write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
+twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
 twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
 
 #using Ensembl BiomaRt R package to fetch HCNC symbol names for all Ensembl ids
