@@ -1,9 +1,9 @@
 #need to install gwasrappid and biomaRt R packages
-install.packages("remotes")
+install.packages("remotes", repos = "http://cran.us.r-project.org")
 remotes::install_github("ramiromagno/gwasrapidd")
 if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
-BiocManager::install("biomaRt")
+  install.packages("BiocManager", repos = "http://cran.us.r-project.org")
+BiocManager::install("biomaRt", repos = "http://cran.us.r-project.org")
 
 library(gwasrapidd)
 library(biomaRt)
