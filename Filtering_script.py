@@ -8,7 +8,7 @@ EFO_Dictionary = {'BMI' :' EFO_0008037', 'Chronic_kidney' : ' EFO_0003884','C-re
 
 
 #open test file
-file = ('GWASrapid_test_output.txt')
+file = ('snptrait_table_csv.csv')
 open_file = open(file).read().strip().split('\n')
 
 #create outfiles, one to holdresults that are of related phenotypes and on that holds those that are not related phenotypes
