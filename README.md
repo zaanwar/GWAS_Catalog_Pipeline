@@ -29,6 +29,7 @@ To run the script, you will need to run the get_gwas_associations.R file,
 <br>
 `Rscript get_gwas_associations.R`
 <br>
+Take the test output from the GWASrapid and run it through the filtering.py python script. This will filter your results into related and unrelated categories.
 
 ### Weekly Milestones
 | Week  | Geraldine | Zain | Jessie |
