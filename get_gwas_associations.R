@@ -1,16 +1,22 @@
 #need to install gwasrappid and biomaRt R packages
-install.packages("remotes")
-remotes::install_github("ramiromagno/gwasrapidd")
+install.packages("remotes", repos = "http://cran.us.r-project.org")
+remotes::install_github("ramiromagno/gwasrapidd", force = TRUE)
 if (!requireNamespace("BiocManager", quietly = TRUE))
-  install.packages("BiocManager")
+  install.packages("BiocManager", repos='http://cran.us.r-project.org')
 BiocManager::install("biomaRt")
 
 library(gwasrapidd)
 library(biomaRt)
 library(dplyr)
 
-#extracting the 
-twas_genes <- read.csv('group8/ENSG-ID_phenotype.txt', sep = '\t' )
+#extracting the twas results with the gene names and the phenotypes
+#twas_genes <- read.csv('ENSG-ID_phenotype.txt', sep = '\t' )
+twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv')
+test_input <- twas_genes %>%
+  distinct(Phenotype, .keep_all = TRUE)
+write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
+twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
+twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
 
 #using Ensembl BiomaRt R package to fetch HCNC symbol names for all Ensembl ids
 ensembl_ids <- twas_genes$GENE
