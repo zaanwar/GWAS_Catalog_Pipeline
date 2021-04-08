@@ -21,6 +21,9 @@ Once you have cloned the repository into your directory using this command,
 <br>
 `git clone https://github.com/zaanwar/GWAS_Catalog_Pipeline.git`
 <br>
+Make sure to move into the GWAS Catalog Pipeline directory with,
+<br>
+`cd GWAS_Catalog_Pipeline/`
 <br>
 To run the script, you will need to run the get_gwas_associations.R file, 
 <br>
