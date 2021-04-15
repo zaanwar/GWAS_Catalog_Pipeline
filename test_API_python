@@ -1,3 +1,0 @@
-snps = "singleNucleotidePolymorphisms/"
-rsidSearch = "search/findByRsId?rsId="
-snpAssociations = "associations?projection=associationsBySnpSummary"
