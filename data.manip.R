@@ -1,3 +1,4 @@
+#get current directory
 wk.dir <- getwd()
 
 rawSPrediScan.filename <- ("example_SPrediScan_output.csv")
@@ -10,5 +11,14 @@ GENE <- as.character(map(strsplit(raw.file$GENE, split="_"),2))
 Phenotype <- raw.file$Phenotype
 
 ensg.pheno <- cbind(GENE,Phenotype)
-
 write.csv(ensg.pheno, paste(raw.file.path, "clean_SPrediScan_ID-pheno.csv", sep = ""), row.names = FALSE)
+
+#get unique GENE & phenotype separately
+unique(GENE) #17 unique genes
+unique(Phenotype) #6 unique phenotypes
+
+#get unique gene & phenotype pair only (to eliminate duplicate combo)
+uniq.combo <- unique(ensg.pheno)
+#write in separate file
+write.csv(uniq.combo, paste(raw.file.path, "unique_ID-pheno.csv", sep = ""), row.names = FALSE)
+
