@@ -11,12 +11,11 @@ library(dplyr)
 
 #extracting the twas results with the gene names and the phenotypes
 #twas_genes <- read.csv('ENSG-ID_phenotype.txt', sep = '\t' )
-twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv')
-test_input <- twas_genes %>%
-  distinct(Phenotype, .keep_all = TRUE)
-write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
-twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
-twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
+#twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv')
+#test_input <- twas_genes %>%
+#  distinct(Phenotype, .keep_all = TRUE)
+#write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
+twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t") #runs test file including only 1 gene/phenotype pair
 
 #using Ensembl BiomaRt R package to fetch HCNC symbol names for all Ensembl ids
 ensembl_ids <- twas_genes$GENE
