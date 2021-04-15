@@ -11,7 +11,7 @@ library(dplyr)
 
 #extracting the twas results with the gene names and the phenotypes
 #twas_genes <- read.csv('ENSG-ID_phenotype.txt', sep = '\t' )
-#twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv')
+#twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv') #runs with the full gene/phenotype info extracted from full csv file
 #test_input <- twas_genes %>%
 #  distinct(Phenotype, .keep_all = TRUE)
 #write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
@@ -43,17 +43,17 @@ get_top_traits <- function(snp, gene){
   associations_snp_gene <- associations_snp_gene@associations[c('association_id', 'pvalue', 'standard_error','beta_number', 'range')]
   top_association_snp_gene <- associations_snp_gene[which.min(associations_snp_gene$pvalue),]
   top_association_snp_gene$snp = snp
-  
+
   if (nrow(top_association_snp_gene) == 0){
-    top_association_snp_gene = data.frame("association_id" = NA, "pvalue" = NA, "standard_error" = NA, "beta_number" = NA, "range" = NA, "snp" = snp, "traits" = NA, "efo_id" = NA,  "gene" = gene)
-  }
+   top_association_snp_gene = data.frame("association_id" = NA, "pvalue" = NA, "standard_error" = NA, "beta_number" = NA, "range" = NA, "snp" = snp, "traits" = NA, "efo_id" = NA,  "hgnc_symbol" = gene)
+   }
   else {
     traits_snps_gene <- get_traits(association_id = top_association_snp_gene$association_id)
     traits_snps_gene <- traits_snps_gene@traits[c('trait')]
     traits_snps_gene <- paste(unlist(traits_snps_gene), collapse=', ')
     
     top_association_snp_gene$traits = traits_snps_gene
-    top_association_snp_gene$gene = gene
+    top_association_snp_gene$hgnc_symbol = gene
     
     list_of_traits <- unlist(strsplit(traits_snps_gene, ", "))
     list_of_efo_ids <- c()
@@ -70,17 +70,22 @@ get_top_traits <- function(snp, gene){
   return(top_association_snp_gene)
 }
 
+
 #looping through to get all of the genes for their snp x phenotype trait information
 print("getting GWAS Catalog snp info of input genes")
 snp_table = data.frame()
 for (gene in hgnc_genenames){
+  cat("getting all SNPs for gene: ", end ="")
   print(gene)
   all_snps <- get_snps(gene)
   for (snp in all_snps){
+    print(snp)
     all_snps_info <- get_top_traits(snp, gene)
     snp_table <- rbind(snp_table, all_snps_info)
   }
 }
 
-snp_table <- snp_table[c(8,6,1,2,3,4,5,7,9)]
-write.csv(snp_table, 'snptrait_table.csv')
+snp_table <- merge(snp_table, hgnc_symbols, by = 'hgnc_symbol')
+full_snp_table <- snp_table[c(1,10,7,2,3,4,5,6,7,8)]
+
+write.csv(full_snp_table, 'full_snptrait_table.csv')
