@@ -35,9 +35,9 @@ file = ('group8/full_snptrait_table.csv')
 open_file = open(file).read().strip().split('\n')
 
 #create outfiles, one to hold results that are of related phenotypes and on that holds those that are not related phenotypes
-related_output = open('group8/output_related.txt','w')
+related_output = open('outputs/output_related.txt','w')
 
-unrelated_output = open('group8/output_unrelated.txt','w')
+unrelated_output = open('outputs/output_unrelated.txt','w')
 
 
 
