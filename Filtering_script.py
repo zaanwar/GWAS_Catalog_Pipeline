@@ -30,7 +30,8 @@ EFO_Dictionary = {'BMI' :'EFO_0008037',
 
 
 #open test file
-file = ('group8/snptrait_table_unique.csv')
+#file = ('group8/snptrait_table_unique.csv')
+file = ('full_snptrait_table.csv')
 open_file = open(file).read().strip().split('\n')
 
 #create outfiles, one to hold results that are of related phenotypes and on that holds those that are not related phenotypes
