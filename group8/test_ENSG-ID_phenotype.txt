@@ -1,2 +1,2 @@
 "GENE"	"Phenotype"
-"1"	"ENSG00000132693"	"C-reactive"
+"1"	"ENSG00000130203"	"HDL_cholesterol"
