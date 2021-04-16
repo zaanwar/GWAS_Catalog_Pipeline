@@ -9,13 +9,20 @@ library(gwasrapidd)
 library(biomaRt)
 library(dplyr)
 
-#extracting the twas results with the gene names and the phenotypes
-#twas_genes <- read.csv('ENSG-ID_phenotype.txt', sep = '\t' )
-#twas_genes <- read.csv('group8/clean_SPrediScan_ID-pheno.csv') #runs with the full gene/phenotype info extracted from full csv file
-#test_input <- twas_genes %>%
-#  distinct(Phenotype, .keep_all = TRUE)
-#write.table(test_input, "group8/test_ENSG-ID_phenotype.txt", sep = "\t")
-twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t") #runs test file including only 1 gene/phenotype pair
+cat("Type in 'full' for full run or 'test' to run with test data: ")
+runtype <- readLines(file("stdin"), n = 1L)
+runtype <- as.character(runtype)
+print(runtype)
+
+if (runtype == "test"){
+  #extracting the twas results with only 1 gene name/phenotype pair
+  twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
+} else if (runtype == "full"){
+  #extracting the full twas results with the gene names and the phenotypes
+  twas_genes <- read.csv('group8/unique_ID-pheno.csv')  
+} else{
+  print("ERROR")
+}
 
 #using Ensembl BiomaRt R package to fetch HCNC symbol names for all Ensembl ids
 ensembl_ids <- twas_genes$GENE
