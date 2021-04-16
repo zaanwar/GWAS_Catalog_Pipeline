@@ -16,7 +16,7 @@ To install it beforehand, run these lines of R code in your environment:
  <br>
 `BiocManager::install("biomaRt")`
 
-### How to use (for test input)
+### How to use
 Once you have cloned the repository into your directory using this command,
 <br>
 `git clone https://github.com/zaanwar/GWAS_Catalog_Pipeline.git`
@@ -31,6 +31,8 @@ To run the script, you will need to run the get_gwas_associations.R file,
 <br>
 `python3 gwas_catalog_pipeline.py`
 <br>
+
+You will be prompted with the option of either a full run using all gene/phenotypes results from the PrediXcan analysis or a test run using the test data of only one gene/phenotype pair.
 
 
 ### Weekly Milestones
