@@ -16,7 +16,7 @@ print(runtype)
 
 if (runtype == "test"){
   #extracting the twas results with only 1 gene name/phenotype pair
-  twas_genes <- read.csv('inputs/test_ENSG-ID_phenotype.txt', sep = "\t")
+  twas_genes <- read.csv('inputs/test_run/test_ENSG-ID_phenotype.txt', sep = "\t")
 } else if (runtype == "full"){
   #extracting the full twas results with the gene names and the phenotypes
   twas_genes <- read.csv('inputs/unique_ID-pheno.csv')  
