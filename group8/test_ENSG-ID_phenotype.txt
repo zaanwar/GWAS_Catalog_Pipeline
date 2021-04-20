@@ -1,2 +1,0 @@
-"GENE"	"Phenotype"
-"1"	"ENSG00000135218"	"HDL_cholesterol"
