@@ -16,10 +16,10 @@ print(runtype)
 
 if (runtype == "test"){
   #extracting the twas results with only 1 gene name/phenotype pair
-  twas_genes <- read.csv('group8/test_ENSG-ID_phenotype.txt', sep = "\t")
+  twas_genes <- read.csv('inputs/test_ENSG-ID_phenotype.txt', sep = "\t")
 } else if (runtype == "full"){
   #extracting the full twas results with the gene names and the phenotypes
-  twas_genes <- read.csv('group8/unique_ID-pheno.csv')  
+  twas_genes <- read.csv('inputs/unique_ID-pheno.csv')  
 } else{
   print("ERROR")
 }
@@ -95,4 +95,4 @@ for (gene in hgnc_genenames){
 snp_table <- merge(snp_table, hgnc_symbols, by = 'hgnc_symbol')
 full_snp_table <- snp_table[c(1,10,7,2,3,4,5,6,8,9)]
 
-write.csv(full_snp_table, 'group8/full_snptrait_table.csv')
+write.csv(full_snp_table, 'inputs/full_snptrait_table.csv')
