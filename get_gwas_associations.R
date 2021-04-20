@@ -95,4 +95,4 @@ for (gene in hgnc_genenames){
 snp_table <- merge(snp_table, hgnc_symbols, by = 'hgnc_symbol')
 full_snp_table <- snp_table[c(1,10,7,2,3,4,5,6,8,9)]
 
-write.csv(full_snp_table, 'inputs/full_snptrait_table.csv')
+write.csv(full_snp_table, 'outputs/full_snptrait_table.csv')
