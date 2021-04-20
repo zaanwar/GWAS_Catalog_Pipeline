@@ -1,0 +1,2 @@
+"GENE"	"Phenotype"
+"1"	"ENSG00000132693"	"C-reactive"
