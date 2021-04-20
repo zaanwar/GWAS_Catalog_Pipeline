@@ -1,3 +1,9 @@
+#prompt user with option to do full or test run
+cat("Type in 'full' for full run or 'test' to run with test data: ")
+runtype <- readLines(file("stdin"), n = 1L)
+runtype <- as.character(runtype)
+print(runtype)
+
 #need to install gwasrappid and biomaRt R packages
 install.packages("remotes", repos = "http://cran.us.r-project.org")
 remotes::install_github("ramiromagno/gwasrapidd", force = TRUE)
@@ -8,11 +14,6 @@ BiocManager::install("biomaRt")
 library(gwasrapidd)
 library(biomaRt)
 library(dplyr)
-
-cat("Type in 'full' for full run or 'test' to run with test data: ")
-runtype <- readLines(file("stdin"), n = 1L)
-runtype <- as.character(runtype)
-print(runtype)
 
 if (runtype == "test"){
   #extracting the twas results with only 1 gene name/phenotype pair
