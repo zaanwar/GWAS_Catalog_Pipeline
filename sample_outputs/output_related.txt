@@ -1,0 +1,4 @@
+"","hgnc_symbol","ensembl_gene_id","snp","association_id","pvalue","standard_error","beta_number","range","traits","efo_id" 
+"10","CD36","ENSG00000135218","rs3211938","80058146",3e-27,0.0113,0.122,"[0.1-0.144]","high density lipoprotein cholesterol measurement","EFO_0004612" 
+"33","CD36","ENSG00000135218","rs60839105","17479133",1e-08,0.518,2.948,"[1.93-3.96]","high density lipoprotein cholesterol measurement","EFO_0004612" 
+"35","CD36","ENSG00000135218","rs2366858","33814",6e-10,NA,0.0325,NA,"high density lipoprotein cholesterol measurement","EFO_0004612" 
