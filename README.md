@@ -30,6 +30,7 @@ To install it beforehand, run these lines of R code in your environment:
 - data.manip.R: R script that filters out ENSG gene names and phenotype descriptions from raw PrediXcan result file
 - get_gwas_associations.R: R script that gets GWAS Catalog SNPs and trait associations
 - \***gwas_catalog_pipeline.py: main python script to run pipeline***
+- sample outputs folder: directory containing example outputs from test-run for comparison purposes
 
 ### How to use
 Once you have cloned the repository into your directory using this command,
