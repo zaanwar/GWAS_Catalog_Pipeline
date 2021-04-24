@@ -8,8 +8,8 @@ Systolic Blood Pressure,EFO_0006335
 Smoking,EFO_0004318
 Coffee,EFO_0004330
 Triglyceride,EFO_0004530
-HDL Cholesterol,EFO_0004574
-LDL Cholesterol,EFO_0004195
+HDL_cholesterol,EFO_0004574
+LDL_cholesterol,EFO_0004195
 WBC,EFO_0004308
 Waist-hip,EFO_0004343
 Diabetes,EFO_0000400
@@ -24,3 +24,4 @@ QT interval,EFO_0004682
 PR interval,EFO_0004462
 Platelet,EFO_0008446
 Height,EFO_0004339
+Total_cholesterol,EFO_0004574
