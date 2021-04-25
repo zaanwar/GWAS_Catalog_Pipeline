@@ -25,7 +25,7 @@ To install it beforehand, run these lines of R code in your environment:
 ### Files provided in repo
 - inputs folder: directory with subset input folders for full_run and test_run
 - Filtering_script.py: python script for filtering GWAS Catalog snp-trait associations as related or unrelated matches to the PrediXcan phenotypes
-- \***Phenotype names + EFO ID: text file containing dictionary of common phenotype descriptions and their corrresponding EFO id values (may want to use in building the Filtering_script.py EFO list)***
+- \***Phenotype + EFO_ID_table.csv: csv file containing table of common phenotype descriptions and their corrresponding EFO id values (may want to use in building the Filtering_script.py EFO list)***
 - README.md: description of script and manual on usage
 - data.manip.R: R script that filters out ENSG gene names and phenotype descriptions from raw PrediXcan result file
 - get_gwas_associations.R: R script that gets GWAS Catalog SNPs and trait associations
@@ -54,7 +54,7 @@ You will be prompted with the option of either a full run using all gene/phenoty
 To adjust the pipeline for your own input, you will want to **modify the input file in the full_run folder named `example_SPrediScan_output.csv`**. You can either upload your own PrediXcan results and rename it as this or change the file pathway in the `data.manip.R` to instead read in your file. 
 <br>
 <br>
-Additionally, you will need to **adjust the `Filtering_script.py` with an EFO_list that matches your `inputs/unique_ID-pheno.csv` output**. The EFO_list needs to contain the ENSG gene name paired with the EFO ID value for the phenotype. We've included a file called `Phenotype names + EFO ID` that contains a dictionary of common phenotype traits and their corresponding EFO ID values as a resource. Elsewise, you can look up the EFO ID on Ontology Search (https://www.ebi.ac.uk/ols/ontologies/efo). 
+Additionally, you will need to **adjust the `Phenotype + EFO_ID_table.csv` file**. The table needs to contain the phenotype trait description with the EFO ID value for the phenotype. The file currenlty contains some common phenotype traits and their corresponding EFO ID values as a resource. Elsewise, you can look up the EFO ID on Ontology Search (https://www.ebi.ac.uk/ols/ontologies/efo). 
 
 ### Finding the outputs
 All desired output files (full_snptrait_table.csv, output_related.txt, output_unrelated.txt) will be available in the `outputs` directory. Results from the filtering of the raw PrediXcan results are available in the `inputs` directory. Use the guide below for help.
