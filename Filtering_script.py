@@ -1,5 +1,5 @@
 #Script that filters related and unrelated results from the GWASRapid output
-file = ('inputs/ unique_ID-pheno.csv')
+file = ('inputs/unique_ID-pheno.csv')
 open_file = open(file).read().strip().split('\n')
 
 file2 = ('Phenotype + EFO_ID_table.csv')
